@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../styles/login.css">
+    </head>
     <body>
         <div class="login-header">
-            <div class=loin-header__title></div>
+            <div class="login-header__title">
                 <p class="title-text">Login</p>
             </div>
+            <!-- <div class="login-header__form">
+                <span>Form</span>
+                <input type="text">
+            </div> -->
         </div>
         <div class="main-container">
             <div class="form-container">
                 <div class="form-container__text">
-                    <label for=""></label>
-                </div> 
+                    <label for="" class="form-label">User Name</label>
+                    <input class="form-input-text" type="text">
+                </div>
+                <div class="form-container__text">
+                    <label for="" class="form-label">Password</label>
+                    <input class="form-input-text" type="text">
+                </div>
+                <div class="form-container__btn">
+                    <button class="form-btn">Login</button>
+                </div>
             </div>
-
-
-
-            <div class="form-container__btn">
-                <botton class="form-btn">Login</botton>
-            </div>
-
-
-
         </div>
-    
     </body>
 </html>
