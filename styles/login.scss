@@ -1,76 +1,161 @@
 @import "variable";
+// .body-test.body-test2 {
+//     background-color: green;
+// }
 
-.login-header{
-    background-color: black;
+// .body-test2 {
+//     background-color: blue;
+// }
+
+.login-header {
+    background-color: rgb(41, 41, 41);
     color: white;
     height: $hloginheader;
+    display: flex;
 
-    &__title{
-        & .title-text{
+    &__title {
+        display: flex;
+        height: $hloginheader;
+        align-items: center;
+        
+        & .title-text {
             display: block;
-            margin: auto;
-            align-items: center;
+            margin-left: 20px;
+        }
+    }
 
-            & .title-text{
-                display: ;
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 15px;
+
+        & .menu-item {
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            margin-bottom: 10px;
+            // transition: all 1s;
+            transition: transform 1s, opacity 3s;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            // &:nth-child(1) {
+            //     background-color: red;
+            // }
+            // &:nth-child(2) {
+            //     background-color: yellow;
+            // }
+            // &:nth-child(3) {
+            //     background-color: blue;
+            // }
+
+            // @for $i from 1 through 3 {
+            //     &:nth-child(#{$i}) {
+            //         width: 50px * $i;
+            //     }
+            // }
+        }
+
+        &:hover {
+
+            & .menu-item {
+                
+
+                &:nth-child(1) {
+                    transform: translateY(calc( 100% + 10px )) rotate(405deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    
+                }
+                &:nth-child(3) {
+                    transform: translateY(calc( -100% - 10px )) rotate(-45deg);
+                }
             }
         }
-        
     }
+
+    // &__form {
+    //     display: block;
+    //     margin: auto 0;
+    //     margin-left: auto;
+    //     margin-right: 10px;
+    // }
 }
-.main-container{
+
+.main-container {
 
 }
 
-.form-container{
+.form-container {
     width: 60%;
-    background-color: blue;
+    // background-color: rgb(159, 159, 252);
     margin: 0 auto;
     margin-top: 100px;
+    
 
-    &__text{
-        margin: 0 auto;
+    &__text {
+        // margin: 0 auto;
+        // margin-left: auto;
+        // margin-right: auto;
         margin-bottom: 50px;
 
-        & .form-label{
+        & .form-label {
             display: block;
             margin-bottom: 7px;
         }
 
-        & .form-input-text{
+        & .form-input-text {
             display: block;
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
-            padding-right: 80px;
+            padding-right: 80%;
             border-radius: .25rem;
 
-
-           &:focus{
-               outline: none;
-               border: solid 3px red;
-           } 
-
+            &:focus {
+                outline: none;
+                border: solid 3px rgb(110, 190, 255);
+            }
         }
     }
-}
 
-&__btn{
-    width: 60%;
-    margin: 0 auto;
+    &__btn {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 50px;
 
-    & .form-btn{
-        display: block;
-        width: 100%;
-        height: 40px;
-        background-color: white;
-        font-size: 18px;
-        letter-spacing: 1px;
+        & .form-btn {
+            display: block;
+            width: 100%;
+            height: 40px;
+            background-color: white;
+            font-size: 18px;
+            letter-spacing: 1px;
+            // font-weight: bold;
+            // padding-left: 100%;
 
+            &:hover {
+                background-color: black;
+                color: white;
+            }
 
-        &:hover{
-            background-color: black;
-            color: white;
-        }        
+            &.hover-animation {
+                color: blue;
+                border-color: blue;
+                transition: all 2s;
+
+                &:hover {
+                    // transition: all 2s;
+                    background-color: blue;
+                    color: white;
+                }
+            }
+        }
     }
 }
